@@ -1,0 +1,24 @@
+{
+  "clearMocks": true,
+  "collectCoverage": true,
+  "collectCoverageFrom": ["<rootDir>/src/**"],
+  "coverageDirectory": "coverage",
+  "coveragePathIgnorePatterns": [],
+  "coverageProvider": "babel",
+  "coverageReporters": ["text", "text-summary"],
+  "coverageThreshold": {
+    "global": {
+      "branches": 0,
+      "functions": 0,
+      "lines": 0,
+      "statements": 0
+    }
+  },
+  "resetMocks": true,
+  "setupFilesAfterEnv": ["<rootDir>/test/config.ts"],
+  "testEnvironment": "node",
+  "testRegex": ["((\\.|test/*.)(test))\\.(ts)?$"],
+  "transform": {
+    "^.+\\.(ts)$": "ts-jest"
+  }
+}
