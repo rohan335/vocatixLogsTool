@@ -3,6 +3,9 @@ The server creates a new batch of files for every level every day and logs all l
 Another file for the day is also created if the file exceeds 50mb
 The logs in /logs/ are labelled with their level and respective date
 In order to log something, the log you want must be sent in the body of an http request as a json object.
+Logs in /logs/ will be generated upon run
+Run with npm run dev
+Server listens on port 3000
 
 The body must have parameters:
   -log, which is just a string. This is the actual log you want to be saved
