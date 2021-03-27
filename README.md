@@ -1,5 +1,6 @@
 This server logs http requests sent to it. They are sorted into one of the files found in /logs/.
 The server creates a new batch of files for every level every day and logs all logs to that batch of files for the day (TLDR; rotates the files it logs to daily)
+Another file for the day is also created if the file exceeds 50mb
 The logs in /logs/ are labelled with their level and respective date
 In order to log something, the log you want must be sent in the body of an http request as a json object.
 

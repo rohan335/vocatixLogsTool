@@ -9,7 +9,6 @@ var error = new winston.transports.DailyRotateFile({
     format: winston.format.combine(winston.format.timestamp(),winston.format.prettyPrint()),
     filename: 'logs/error-%DATE%.log',
     datePattern: 'YYYY-MM-DD',
-    zippedArchive: true,
     maxSize: '50m',
 })
 var warn = new winston.transports.DailyRotateFile({
@@ -17,7 +16,6 @@ var warn = new winston.transports.DailyRotateFile({
     format: winston.format.combine(winston.format.timestamp(),winston.format.prettyPrint()),
     filename: 'logs/warn-%DATE%.log',
     datePattern: 'YYYY-MM-DD',
-    zippedArchive: true,
     maxSize: '50m',
 })
 var info = new winston.transports.DailyRotateFile({
@@ -25,7 +23,6 @@ var info = new winston.transports.DailyRotateFile({
     format: winston.format.combine(winston.format.timestamp(),winston.format.prettyPrint()),
     filename: 'logs/info-%DATE%.log',
     datePattern: 'YYYY-MM-DD',
-    zippedArchive: true,
     maxSize: '50m',
 })
 var http = new winston.transports.DailyRotateFile({
@@ -33,7 +30,6 @@ var http = new winston.transports.DailyRotateFile({
     format: winston.format.combine(winston.format.timestamp(),winston.format.prettyPrint()),
     filename: 'logs/http-%DATE%.log',
     datePattern: 'YYYY-MM-DD',
-    zippedArchive: true,
     maxSize: '50m',
 })
 var verbose = new winston.transports.DailyRotateFile({
@@ -41,7 +37,6 @@ var verbose = new winston.transports.DailyRotateFile({
     format: winston.format.combine(winston.format.timestamp(),winston.format.prettyPrint()),
     filename: 'logs/verbose-%DATE%.log',
     datePattern: 'YYYY-MM-DD',
-    zippedArchive: true,
     maxSize: '50m',
 })
 var debug = new winston.transports.DailyRotateFile({
@@ -49,7 +44,6 @@ var debug = new winston.transports.DailyRotateFile({
     format: winston.format.combine(winston.format.timestamp(),winston.format.prettyPrint()),
     filename: 'logs/debug-%DATE%.log',
     datePattern: 'YYYY-MM-DD',
-    zippedArchive: true,
     maxSize: '50m',
 })
 var silly = new winston.transports.DailyRotateFile({
@@ -57,7 +51,6 @@ var silly = new winston.transports.DailyRotateFile({
     format: winston.format.combine(winston.format.timestamp(),winston.format.prettyPrint()),
     filename: 'logs/silly-%DATE%.log',
     datePattern: 'YYYY-MM-DD',
-    zippedArchive: true,
     maxSize: '50m',
 })
 
