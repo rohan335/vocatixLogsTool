@@ -1,0 +1,135 @@
+{
+  level: 'error',
+  message: {
+    log: 'some sort of log lmao',
+    tag: 'Crud Server',
+    meta: { 'some key': 'some junk', 'some other key': 4 }
+  },
+  timestamp: '2021-04-12T20:35:25.619Z'
+}
+{
+  level: 'error',
+  message: {
+    log: 'some sort of log lmao',
+    tag: 'Crud Server',
+    meta: { 'some key': 'some junk', 'some other key': 4 }
+  },
+  timestamp: '2021-04-12T20:39:27.380Z'
+}
+{
+  level: 'error',
+  message: {
+    log: 'some sort of log lmao',
+    tag: 'Crud Server',
+    meta: { 'some key': 'some junk', 'some other key': 4 }
+  },
+  timestamp: '2021-04-12T21:04:52.553Z'
+}
+{
+  level: 'error',
+  message: {
+    log: 'some sort of log lmao',
+    tag: 'Crud Server',
+    meta: { 'some key': 'some junk', 'some other key': 4 }
+  },
+  timestamp: '2021-04-12T21:04:54.120Z'
+}
+{
+  level: 'error',
+  message: {
+    log: 'some sort of log lmao',
+    tag: 'Crud Server',
+    meta: { 'some key': 'some junk', 'some other key': 4 }
+  },
+  timestamp: '2021-04-12T21:05:06.317Z'
+}
+{
+  level: 'error',
+  message: {
+    log: 'some sort of log lmao',
+    tag: 'Crud Server',
+    meta: { 'some key': 'some junk', 'some other key': 4 }
+  },
+  timestamp: '2021-04-12T21:05:38.731Z'
+}
+{
+  level: 'error',
+  message: {
+    log: 'some sort of log lmao',
+    tag: 'Crud Server',
+    meta: { 'some key': 'some junk', 'some other key': 4 }
+  },
+  timestamp: '2021-04-12T21:05:57.814Z'
+}
+{
+  level: 'error',
+  message: {
+    log: 'some sort of log lmao',
+    tag: 'Crud Server',
+    meta: { 'some key': 'some junk', 'some other key': 4 }
+  },
+  timestamp: '2021-04-12T21:08:34.736Z'
+}
+{
+  level: 'error',
+  message: {
+    log: 'some sort of log lmao',
+    tag: 'Crud Server',
+    meta: { 'some key': 'some junk', 'some other key': 4 }
+  },
+  timestamp: '2021-04-13T00:17:47.894Z'
+}
+{
+  level: 'error',
+  message: {
+    log: 'some sort of log lmao',
+    tag: 'Crud Server',
+    meta: { 'some key': 'some junk', 'some other key': 4 }
+  },
+  timestamp: '2021-04-13T00:19:03.077Z'
+}
+{
+  level: 'error',
+  message: {
+    log: 'some sort of log lmao',
+    tag: 'Crud Server',
+    meta: { 'some key': 'some junk', 'some other key': 4 }
+  },
+  timestamp: '2021-04-13T00:22:51.073Z'
+}
+{
+  level: 'error',
+  message: {
+    log: 'some sort of log lmao',
+    tag: 'Crud Server',
+    meta: { 'some key': 'some junk', 'some other key': 4 }
+  },
+  timestamp: '2021-04-13T00:28:08.241Z'
+}
+{
+  level: 'error',
+  message: {
+    log: 'some sort of log lmao',
+    tag: 'Crud Server',
+    meta: { 'some key': 'some junk', 'some other key': 4 }
+  },
+  timestamp: '2021-04-13T00:37:18.190Z'
+}
+{
+  level: 'error',
+  message: {
+    log: 'some sort of log lmao',
+    tag: 'Crud Server',
+    meta: { 'some key': 'some junk', 'some other key': 4 }
+  },
+  timestamp: '2021-04-13T00:46:26.181Z'
+}
+{
+  level: 'error',
+  message: {
+    log: 'some sort of log lmao',
+    tag: 'Crud Server',
+    meta: { 'some key': 'some junk', 'some other key': 4 }
+  },
+  timestamp: '2021-04-13T00:48:57.054Z'
+}

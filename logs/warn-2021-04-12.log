@@ -1,0 +1,18 @@
+{
+  level: 'warn',
+  message: {
+    log: 'some sort of log lmao',
+    tag: 'Crud Server',
+    meta: { 'some key': 'some junk', 'some other key': 4 }
+  },
+  timestamp: '2021-04-12T21:04:59.969Z'
+}
+{
+  level: 'warn',
+  message: {
+    log: 'some sort of log lmao',
+    tag: 'Crud Server',
+    meta: { 'some key': 'some junk', 'some other key': 4 }
+  },
+  timestamp: '2021-04-12T21:05:01.134Z'
+}

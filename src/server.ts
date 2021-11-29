@@ -23,6 +23,13 @@ const port = process.env["PORT"] || 3000;
 
 const app = express();
 
+const Discord = require('discord.js');
+const client = new Discord.Client()
+
+//removed for example. could put it in .env and gitignore but meh
+const token = "key here"
+client.login(token)
+
 // Middleware.
 app.use(demoLogger);
 app.use(express.json({ limit: "50mb" }));
@@ -37,25 +44,35 @@ app.use(bodyParser.raw());
 // When testing, let supertest find the first available port so no port collisions occur between jest workers.
 if (process.env["NODE_ENV"] !== "test") {
 
-  app.post('/post-test', (req, res) => {
-    //I hate Ts variables using references, so this is the only way I could get it to make a copy of the JSON object that was not a reference 😐
-    //Fuck you Ts
-    var temp = JSON.parse(JSON.stringify(req.body));
-    //remove the type in the copy, since keeping it in would be redundant. its already the log in as "level"
-    delete temp['type'];
-    
-    //if statements to sort the request level to the correct logger
-    //logs with the ccorrect logger
-    if(req.body.type == "error") {loggers.errorLogger.log(req.body.type, temp, 200)}
-    if(req.body.type == "warn") {loggers.warnLogger.log(req.body.type, temp, 200)}
-    if(req.body.type == "info") {loggers.infoLogger.log(req.body.type, temp, 200)}
-    if(req.body.type == "http") {loggers.httpLogger.log(req.body.type, temp, 200)}
-    if(req.body.type == "verbose") {loggers.verboseLogger.log(req.body.type, temp, 200)}
-    if(req.body.type == "debug") {loggers.debugLogger.log(req.body.type, temp, 200)}
-    if(req.body.type == "silly") {loggers.sillyLogger.log(req.body.type, temp, 200)}
-    
-    //returns HTTP OK 200 🚀🚀🚀
-    res.sendStatus(200);
+  client.on('ready', () => {
+    const notifChannel = client.channels.cache.get('831220274661818462');
+    notifChannel.send("Hola, Yo estoy alive");
+
+    app.post('/post-test', (req, res) => {
+      //I hate Ts variables using references, so this is the only way I could get it to make a copy of the JSON object that was not a reference 😐
+      //Fuck you Ts
+      var temp = JSON.parse(JSON.stringify(req.body));
+      //remove the type in the copy, since keeping it in would be redundant. its already the log in as "level"
+      delete temp['type'];
+      
+      //if statements to sort the request level to the correct logger
+      //logs with the ccorrect logger
+      if(req.body.type == "error") {
+        loggers.errorLogger.log(req.body.type, temp, 200);
+        const forDiscord = JSON.stringify(temp)
+        notifChannel.send('@everyone' + '```json\n' + forDiscord + '\n```');
+      }
+      if(req.body.type == "warn") {loggers.warnLogger.log(req.body.type, temp, 200)}
+      if(req.body.type == "info") {loggers.infoLogger.log(req.body.type, temp, 200)}
+      if(req.body.type == "http") {loggers.httpLogger.log(req.body.type, temp, 200)}
+      if(req.body.type == "verbose") {loggers.verboseLogger.log(req.body.type, temp, 200)}
+      if(req.body.type == "debug") {loggers.debugLogger.log(req.body.type, temp, 200)}
+      if(req.body.type == "silly") {loggers.sillyLogger.log(req.body.type, temp, 200)}
+      
+      //returns HTTP OK 200 🚀🚀🚀
+      res.sendStatus(200);
+    })
+
   })
 
   app.listen(port, () => console.log(`Server listening on port ${port}...`));
